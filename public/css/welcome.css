@@ -1,0 +1,167 @@
+ html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
+
+            .content {
+                text-align: center;
+            }
+
+            .title {
+                font-size: 84px;
+            }
+            .title h1{
+                font-size: 85PX;
+                color: #636363;
+                font-weight: 500;
+            }
+            .title h2{
+                   font-size: 46PX;
+    color: #8a8787;
+    font-weight: 500;
+    letter-spacing: 3px;
+            }
+    
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            
+            .nomargin{margin: 0;}
+
+.redes ul li{display: inline-block;padding: 10px 5px;}
+
+.redes a{color: #a0a0a0;}
+.redes a:hover{color: #1697f3;}
+.redes li,.redes a{
+    -webkit-transition: all .5s ease;
+   -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+     -o-transition: all .5s ease;
+        transition: all .5s ease;
+}
+.redes li.toUp{
+   -webkit-transform: translateY(-10px);
+      -moz-transform: translateY(-10px);
+       -ms-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+           transform: translateY(-10px);
+}
+
+
+/*.alert{display: inline-block!important;}*/
+
+.cv img{
+        width: 40%;
+    height: auto;
+    background: #e8e8e8;
+    padding: 10px;
+    border: solid 0.2em #909090;
+    box-shadow: 7px 7px 12px 4px #5d5d5d;
+    -webkit-transition: all .4s  ease;
+       -moz-transition: all .4s  ease;
+        -ms-transition: all .4s  ease;
+         -o-transition: all .4s  ease;
+            transition: all .4s  ease;
+    z-index: 51;
+}
+
+.cv img.transfImg{
+    -webkit-transform: rotate(20deg) scale(1.2);
+       -moz-transform: rotate(20deg) scale(1.2);
+        -ms-transform: rotate(20deg) scale(1.2);
+         -o-transform: rotate(20deg) scale(1.2);
+            transform: rotate(20deg) scale(1.2);
+}
+
+.contacto h1,.cv h1{
+        text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 1.6em;
+    position: relative;
+    color: #c9c9c9;
+    margin-bottom: 20px;
+}
+.contacto h1:before,.cv h1:before{
+     content: "";
+  display: block;
+  border-top: solid 1px #c9c9c9;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+.contacto h1 span,.cv h1 span{
+background: #fff;
+  padding: 0 20px;
+  position: relative;
+  z-index: 5;
+}
+
+.contacto input{    box-shadow: none!important;
+    border-top: none;
+    border-left: none;
+    border-bottom: solid 0.1em #bfb7b7;
+    border-right: none;
+}
+.contacto textarea{
+    border: solid 0.1em #bfb7b7!important;
+    box-shadow: none!important;
+}
+.contacto textarea:focus{
+    border-color: #1697f3!important;
+}
+
+.btn-primary{
+    background-color: #337ab7!important;
+    padding: 10px 40px!important;
+    border:solid 0.1em #337ab7!important;
+    -webkit-transition: all .4s ease;
+       -moz-transition: all .4s ease;
+        -ms-transition: all .4s ease;
+         -o-transition: all .4s ease;
+            transition: all .4s ease;
+}
+.btn-primary:hover{
+    color: #337ab7!important;
+    background: #fff!important;
+}
+
+.personal{
+    margin: 10px 0;
+}
+.personal ul li{
+    display: inline-block;padding: 0 10px;
+}
