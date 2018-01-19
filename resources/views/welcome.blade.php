@@ -5,15 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Francisco Gacitúa</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+
         {!! Html::style('css/welcome.css') !!}
         {!! Html::style('css/bootstrap.min.css') !!}
+        {!! Html::style('css/bootstrap-grid.min.css') !!}
+        {{ Html::favicon( '/img/favicon.png' ) }}
     {!! Html::style('css/admin.css') !!}
-    {!! Html::style('fonts/font-awesome/css/font-awesome.css') !!}
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+
+
 
     </head>
     <body>
