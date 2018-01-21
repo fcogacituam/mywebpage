@@ -13,7 +13,11 @@
 
 Route::get('/','WelcomeController@index');
 Route::resource('contacto','MailController');
-
+Route::get('/admin','AdminController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin/users/trashed','UsersController@trashed');
+Route::get('/admin/users/restore/{id}','UsersController@restore');
+Route::resource('/admin/users','UsersController');

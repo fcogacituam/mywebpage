@@ -1,4 +1,4 @@
-<div class="col-md-6">
+<div class="row"><div class="col-md-6">
 	<div class="form-group">
 		{{Form::text('nombre',null,['class'=>'form-control','placeholder'=>'Ingrese su nombre'])}}
 	</div>
@@ -42,5 +42,5 @@
 	
 	
 	
-
+</div>
 

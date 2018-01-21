@@ -15,27 +15,37 @@
         {!! Html::style('css/bootstrap.min.css') !!}
         {!! Html::style('css/bootstrap-grid.min.css') !!}
         {{ Html::favicon( '/img/favicon.png' ) }}
-    {!! Html::style('css/admin.css') !!}
-    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+        {!! Html::style('css/admin.css') !!}
+        {!! Html::style('css/main.css') !!}
+    <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 
 
 
     </head>
-    <body>
+    <body class="welcome">
         <div class="container">
             @if (Route::has('login'))
                 <div class="">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/admin') }}">Admin</a>
+                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                </div>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ url('/admin') }}"><i class="fas fa-sign-in-alt" ></i>  Login</a>
                        {{--  <a href="{{ route('register') }}">Register</a> --}}
                     @endauth
                 </div>
             @endif
 
             <div class="container text-center">
-                <div class="title m-b-md">
+                <div class="title">
                     <h1 class="nomargin">Francisco Gacitúa Maturana</h1>
                     <h2 class="nomargin">Ingeniero Civil Informático</h2>
                 </div>
@@ -45,37 +55,27 @@
                      <div class="personal col-md-12">
 
                         <ul>
-                            <li><i class="fa fa-envelope" aria-hidden="true"></i>   contacto@fgacitua.cl</li>
-                            <li><i class="fa fa-whatsapp" aria-hidden="true"></i>   +56973712292</li>
+                            <li><i class="fas fa-envelope" aria-hidden="true"></i>   contacto@fgacitua.cl</li>
+                            <li><i class="fab fa-whatsapp" aria-hidden="true"></i>   +56973712292</li>
                         </ul>
                 
                     </div>
                     <div class="redes col-md-12">
                         <ul class="">
-                            <li><a href="https://www.facebook.com/Pamshoo">
-                                <span class="fa-stack fa-lg">
-                                  <i class="fa fa-square fa-stack-2x"></i>
-                                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a></li>
-                            <li><a href="https://www.linkedin.com/in/francisco-gacit%C3%BAa-maturana-353b45a3/">
-                                <span class="fa-stack fa-lg">
-                                  <i class="fa fa-square fa-stack-2x"></i>
-                                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a></li>
-                            <li><a href="https://github.com/fcogacituam/">
-                                <span class="fa-stack fa-lg">
-                                  <i class="fa fa-square fa-stack-2x"></i>
-                                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a></li>
-                            <li><a href="https://www.instagram.com/fcogacituam/" >
-                                <span class="fa-stack fa-lg">
-                                  <i class="fa fa-square fa-stack-2x"></i>
-                                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a></li>
+                            <div class="fa-2x">
+                                <li><a href="https://www.facebook.com/Pamshoo">
+                                    <i class="fab fa-facebook-square" ></i>
+                                </a></li>
+                                <li><a href="https://www.linkedin.com/in/francisco-gacit%C3%BAa-maturana-353b45a3/">
+                                    <i class="fab fa-linkedin" ></i>
+                                </a></li>
+                                <li><a href="https://github.com/fcogacituam/">
+                                    <i class="fab fa-github-square" ></i>
+                                </a></li>
+                                <li><a href="https://www.instagram.com/fcogacituam/" >
+                                    <i class="fab fa-instagram" ></i>
+                                </a></li>
+                            </div>
                         </ul>
                     </div>
 
@@ -101,7 +101,7 @@
         </div>
 
 
-
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
     {!! Html::script('js/jquery.js') !!}
 {!! Html::script('js/jquery1-12.js') !!}
 {!! Html::script('js/bootstrap.js') !!}
